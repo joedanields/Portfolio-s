@@ -68,17 +68,26 @@ st.markdown("""
 
 st.markdown("<div class='game-title'>Welcome to the Guessing Game!</div>", unsafe_allow_html=True)
 
+# Initialize session state variables
 if 'guessing_num' not in st.session_state:
     st.session_state.guessing_num = random.randint(1, 50)
     st.session_state.attempts = 0
     st.session_state.game_over = False
     st.session_state.name = ""
 
+if 'machine_guess' not in st.session_state:
+    st.session_state.machine_guess = None
+    st.session_state.machine_low = 1
+    st.session_state.machine_high = 50
+    st.session_state.machine_attempts = 0
+
+# Get user name once
 if not st.session_state.name:
     st.session_state.name = st.text_input("Enter your name:")
     if st.button("Submit"):
         st.balloons()  # Celebrate submission with balloons
 
+# Two tabs for two game modes
 tab1, tab2 = st.tabs(["PLAYER GUESS", "MACHINE GUESS"])
 with tab1:
     st.header("Machine thinks a Number, User Guesses")
@@ -119,22 +128,7 @@ with tab1:
             st.session_state.game_over = False
             st.write("Game restarted! Try to guess the new number.")
 
-import streamlit as st
-
-# Initialize session state variables
-if "machine_guess" not in st.session_state:
-    st.session_state.machine_guess = None
-if "machine_low" not in st.session_state:
-    st.session_state.machine_low = 0
-if "machine_high" not in st.session_state:
-    st.session_state.machine_high = 100
-if "machine_attempts" not in st.session_state:
-    st.session_state.machine_attempts = 0
-if "name" not in st.session_state:
-    st.session_state.name = ""
-
-# Start of the app content
-with st.container():
+with tab2:
     st.header("User Thinks a Number, Machine Guesses")
     st.write("""
         <div class='rules'>
