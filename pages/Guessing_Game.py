@@ -119,7 +119,22 @@ with tab1:
             st.session_state.game_over = False
             st.write("Game restarted! Try to guess the new number.")
 
-with tab2:
+import streamlit as st
+
+# Initialize session state variables
+if "machine_guess" not in st.session_state:
+    st.session_state.machine_guess = None
+if "machine_low" not in st.session_state:
+    st.session_state.machine_low = 0
+if "machine_high" not in st.session_state:
+    st.session_state.machine_high = 100
+if "machine_attempts" not in st.session_state:
+    st.session_state.machine_attempts = 0
+if "name" not in st.session_state:
+    st.session_state.name = ""
+
+# Start of the app content
+with st.container():
     st.header("User Thinks a Number, Machine Guesses")
     st.write("""
         <div class='rules'>
