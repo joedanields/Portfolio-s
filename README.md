@@ -1,74 +1,55 @@
-# Number Guessing Game with Streamlit
+# Portfolio and Number Guessing Game Projects
 
-## Description
-This project is a **Number Guessing Game** implemented using Python and Streamlit. The app provides two gameplay modes:
+This repository contains two projects:
 
-1. **User Guess Mode:** The user guesses a randomly chosen number by the machine.
-2. **Machine Guess Mode:** The user thinks of a number, and the machine attempts to guess it.
+1. **Joe Daniel's Portfolio**: A Streamlit-based web application showcasing personal achievements, skills, and contact information.
+2. **Number Guessing Game**: A fun Python-based CLI game where the player guesses a randomly chosen number.
 
-## Features
-- User-friendly interface with Streamlit.
-- Interactive gameplay with real-time feedback.
-- Separate tabs for two game modes.
-- Tracks the number of attempts taken in both modes.
+---
 
-## How to Run the Project
+## 1. Joe Daniel's Portfolio
 
-### Prerequisites
-Ensure you have the following installed on your system:
-- Python 3.7+
-- Streamlit library
+### Overview
+Joe Daniel's Portfolio is a professional and interactive web application created using Streamlit. It highlights education, skills, and contact details, offering a polished interface for personal branding.
 
-### Installation
-1. Clone this repository or download the source code.
-2. Navigate to the project directory:
-   
-3. Install required libraries:
-   ```bash
-   pip install streamlit
-   ```
-
-### Running the Application
-1. Launch the Streamlit app:
-   ```bash
-   streamlit run app.py
-   ```
-2. Open the URL shown in your terminal (usually `http://localhost:8501`) in a web browser.
-3. Play the game by selecting your desired mode!
-
-## Game Modes
-
-### 1. User Guess Mode
-- The machine selects a random number between 1 and 50.
-- The user guesses the number and receives feedback: **Higher**, **Lower**, or **Correct**.
-- The game tracks the number of attempts taken to guess correctly.
-
-### 2. Machine Guess Mode
-- The user thinks of a number between 1 and 50.
-- The machine tries to guess the number.
-- The user provides guidance using **Higher**, **Lower**, or **Correct** buttons.
-- The machine tries to guess the number in the minimum attempts.
+### Features
+- **Responsive Design**: Adaptable layout for various screen sizes.
+- **Sections**:
+  - **Introduction**: Personal details and a welcoming message.
+  - **Tabs**:
+    - **Education**: Highlights academic qualifications.
+    - **Skills**: Visual representation of technical and soft skills.
+    - **Contact**: Social media links and a feedback form.
+- **Interactive Feedback Form**: Allows users to leave messages directly.
+- **Social Media Integration**: Direct links to GitHub, LinkedIn, and Instagram.
 
 
+## 2. Number Guessing Game
 
-## Technologies Used
-- **Python**: Backend programming.
-- **Streamlit**: Web framework for building the interactive app.
-- **Random Module**: Used to generate random numbers.
+### Overview
+The Number Guessing Game is a simple command-line application where players try to guess a randomly generated number within a specified range. It provides feedback after each guess to guide the player.
 
-## Customization
-You can modify the code to:
-- Change the range of numbers (default: 1 to 50).
-- Add more game modes or enhance the UI using Streamlit widgets.
+### Features
+- **Random Number Generation**: The game randomly selects a number within a customizable range.
+- **Player Guidance**: Feedback provided for each guess (e.g., "Too high!" or "Too low!").
+- **Replay Option**: Allows players to restart the game after completion.
+- **Customizable Range**: Adjust the difficulty by setting a different number range.
 
-## License
-This project is licensed under the MIT License. Feel free to use, modify, and distribute the code.
+---
 
-## Author
-- [Joe Daniel A](https://github.com/joedanields)
+## Future Improvements
 
-## Contributions
-Contributions are welcome! Feel free to fork this project and submit pull requests for improvements.
+### Portfolio
+- Add a dynamic section for displaying projects.
+- Implement a database to store feedback from users.
 
-## Feedback
-If you have any feedback or questions, please contact [joedanielajd@gmail.com].
+### Number Guessing Game
+- Add difficulty levels.
+- Introduce a scoring system to track performance.
+
+---
+
+## Contributing
+Contributions are welcome! Feel free to fork the repository and submit pull requests with your improvements.
+
+---
